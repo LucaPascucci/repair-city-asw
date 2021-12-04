@@ -1,0 +1,118 @@
+{
+  "name": "myApp",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/common": "4.4.3",
+    "@angular/compiler": "4.4.3",
+    "@angular/compiler-cli": "4.4.3",
+    "@angular/core": "4.4.3",
+    "@angular/forms": "4.4.3",
+    "@angular/http": "4.4.3",
+    "@angular/platform-browser": "4.4.3",
+    "@angular/platform-browser-dynamic": "4.4.3",
+    "@ionic-native/app-preferences": "^4.3.1",
+    "@ionic-native/camera": "^4.3.1",
+    "@ionic-native/core": "4.3.0",
+    "@ionic-native/facebook": "^4.3.1",
+    "@ionic-native/firebase": "^4.3.3",
+    "@ionic-native/geolocation": "^4.3.1",
+    "@ionic-native/google-maps": "^4.3.3",
+    "@ionic-native/keyboard": "^4.3.1",
+    "@ionic-native/launch-navigator": "^4.3.2",
+    "@ionic-native/network": "^4.3.1",
+    "@ionic-native/social-sharing": "^4.3.1",
+    "@ionic-native/splash-screen": "4.3.0",
+    "@ionic-native/status-bar": "4.3.0",
+    "@ionic-native/toast": "^4.3.1",
+    "@ionic/storage": "2.0.1",
+    "cordova-android": "6.3.0",
+    "cordova-browser": "5.0.0",
+    "cordova-ios": "4.5.3",
+    "cordova-plugin-actionsheet": "^2.3.3",
+    "cordova-plugin-app-preferences": "^0.99.3",
+    "cordova-plugin-camera": "^2.4.1",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-device": "^1.1.6",
+    "cordova-plugin-dialogs": "^1.3.3",
+    "cordova-plugin-facebook4": "^1.9.1",
+    "cordova-plugin-firebase": "^0.1.24",
+    "cordova-plugin-geolocation": "^2.4.3",
+    "cordova-plugin-googlemaps": "^2.1.1",
+    "cordova-plugin-ionic-webview": "^1.1.15",
+    "cordova-plugin-network-information": "^1.3.3",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "cordova-plugin-statusbar": "git+https://github.com/apache/cordova-plugin-statusbar.git",
+    "cordova-plugin-whitelist": "^1.3.2",
+    "cordova-plugin-x-socialsharing": "^5.2.0",
+    "cordova-plugin-x-toast": "^2.6.0",
+    "es6-promise-plugin": "^4.1.0",
+    "firebase": "^4.5.1",
+    "geofire": "^4.1.2",
+    "geolocation-marker": "^2.0.5",
+    "ionic-angular": "3.7.1",
+    "ionic-plugin-keyboard": "^2.2.1",
+    "ionicons": "3.0.0",
+    "promise-polyfill": "6.0.2",
+    "rxjs": "5.4.3",
+    "sw-toolbox": "3.6.0",
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "^4.0.7",
+    "zone.js": "0.8.18"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "3.0.0",
+    "ionic": "3.18.0",
+    "npm-update-all": "^1.0.1",
+    "typescript": "2.3.4"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": " "
+      },
+      "cordova-plugin-facebook4": {
+        "APP_ID": "",
+        "APP_NAME": "Repair City"
+      },
+      "cordova-plugin-app-preferences": {},
+      "cordova-plugin-x-toast": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-compat": {},
+      "cordova-plugin-camera": {
+        "CAMERA_USAGE_DESCRIPTION": "Camera",
+        "PHOTOLIBRARY_USAGE_DESCRIPTION": "Libreria Foto"
+      },
+      "cordova-plugin-x-socialsharing": {},
+      "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+        "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes"
+      },
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_ANDROID": "",
+        "API_KEY_FOR_IOS": "",
+        "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
+        "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
+      },
+      "cordova-plugin-firebase": {}
+    }
+  }
+}

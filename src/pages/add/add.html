@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Nuova Segnalazione
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismissModal()">
+        <ion-icon name="close" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="sendSegnalation()">
+        <ion-icon name="checkmark" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+
+  <ion-item>
+    <ion-label class="centered_label" color="primary" stacked>Titolo</ion-label>
+    <ion-input [(ngModel)]="segTitle" placeholder="Titolo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="centered_label" color="primary" stacked>Descrizione</ion-label>
+    <ion-textarea [(ngModel)]="segDescription" placeholder="Descrizione"></ion-textarea>
+  </ion-item>
+
+  <div id="divsegment">
+    <ion-item>
+      <ion-label color="primary">Gravità</ion-label>
+      <ion-select [(ngModel)]="gravity">
+        <ion-option value="low">Bassa</ion-option>
+        <ion-option value="mid">Media</ion-option>
+        <ion-option value="high">Alta</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <div id="load_button">
+    <button ion-button round (click)="showActionSheetPhoto()">Seleziona foto</button>
+  </div>
+  <div id="loaded_image" >
+    <img [src]="imageToShow" *ngIf="imageToShow" />
+  </div>
+</ion-content>

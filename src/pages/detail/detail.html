@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf="segnalation">{{segnalation.title}}</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismissModal()">
+        <ion-icon name="close" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="showActionSheetMore()">
+        <ion-icon name="more" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="container">
+  <div #map id="map"></div>
+  <div id="segnalation_container">
+    <div>
+      <p><b>Descrizione</b></p>
+      <p>{{segnalation.description}}</p>
+    </div>
+
+    <div>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left (click)="likeClicked(true)">
+            <ion-icon name="ios-thumbs-up-outline" *ngIf="segnalation.userchoice==0 || segnalation.userchoice==-1"></ion-icon>
+            <ion-icon name="ios-thumbs-up" *ngIf="segnalation.userchoice==1"></ion-icon>
+            <div>{{segnalation.likes}} Mi piace</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left (click)="likeClicked(false)">
+            <ion-icon name="ios-thumbs-down-outline" *ngIf="segnalation.userchoice==0 || segnalation.userchoice==1"></ion-icon>
+            <ion-icon name="ios-thumbs-down" *ngIf="segnalation.userchoice==-1"></ion-icon>
+            <div>{{segnalation.dislikes}} Non mi piace</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div>
+      <p><b>Data creazione:</b> {{segnalation.date}}</p>
+    </div>
+
+    <div id="detail_profile">
+      <p>
+        <img [src]="segnalation.userImage" id="user_image" width="50px" height="50px" alt="user_image"/>
+        <b>{{segnalation.userFirstName}} {{segnalation.userLastName}}</b>
+      </p>
+    </div>
+
+    <div>
+      <img [src]="segnalation.image" id="segnalation_image" alt="segnalation_image"/>
+    </div>
+
+  </div>
+</ion-content>

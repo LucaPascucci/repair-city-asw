@@ -1,0 +1,28 @@
+page-list {
+
+  ion-title {
+    display: none;
+  }
+
+  div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #segment_list {
+    width: 95%;
+    margin: 0px auto;
+  }
+
+  .small {
+    font-size: small;
+  }
+
+  .gravity_icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    float: right;
+  }
+
+}

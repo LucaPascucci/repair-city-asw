@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'repaircityicons';
+  src:  url('../assets/fonts/repaircityicons.eot?dpyhsm');
+  src:  url('../assets/fonts/repaircityicons.eot?dpyhsm#iefix') format('embedded-opentype'),
+  url('../assets/fonts/repaircityicons.ttf?dpyhsm') format('truetype'),
+  url('../assets/fonts/repaircityicons.woff?dpyhsm') format('woff'),
+  url('../assets/fonts/repaircityicons.svg?dpyhsm#repaircityicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'repaircityicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin makeIcon($arg, $val) {
+  .icon-#{$arg}:before ,
+  .ion-ios-icon-#{$arg}:before ,
+  .ion-ios-icon-#{$arg}-outline:before ,
+  .ion-md-icon-#{$arg}:before ,
+  .ion-md-icon-#{$arg}-outline:before {
+    content: $val;
+    font-size: 30px;
+    color: #00796b;
+  }
+}
+
+@mixin makeIconAndroid($arg, $val) {
+  .icon-#{$arg}:before ,
+  .ion-md-icon-#{$arg}:before ,
+  .ion-md-icon-#{$arg}-outline:before {
+    content: $val;
+    font-size: 26px;
+    color: #00796b;
+  }
+}
+
+@include makeIcon(hybrid, '\e900');
+@include makeIcon(normal, '\e901');
+@include makeIcon(satellite, '\e902');
+@include makeIcon(thumbs_down_android, '\e903');
+@include makeIcon(thumbs_up_android, '\e904');

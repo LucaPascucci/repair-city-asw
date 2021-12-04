@@ -1,0 +1,26 @@
+page-settings{
+
+  .instagram {
+    background: linear-gradient(to top right, #7340a7 0%, #dd322e 50%, #f4d749 100%)
+  }
+
+  .center_image {
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+    border-radius:10px;
+  }
+
+  .background {
+    color: white;
+    text-align: center;
+    height: 50%;
+    padding-top: 15%;
+    background-image: url(../assets/ProfileBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+}

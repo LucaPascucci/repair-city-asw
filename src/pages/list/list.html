@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista</ion-title>
+    <div>
+      <ion-segment id="segment_list" [(ngModel)]="filter" (ionChange)="segmentChanged()">
+        <ion-segment-button value="distance">
+          Distanza
+        </ion-segment-button>
+        <ion-segment-button value="gravity">
+          Gravità
+        </ion-segment-button>
+        <ion-segment-button value="recent">
+          Recenti
+        </ion-segment-button>
+        <ion-segment-button value="popularity">
+          Popolari
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let item of cardItems" class="animated slideInLeft">
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img [src]="item.userImage">
+      </ion-avatar>
+      <h2>{{item.userFirstName}} {{item.userLastName}}</h2>
+      <p>{{item.date}}</p>
+    </ion-item>
+
+    <img [src]="item.image" (click)="showSegnalation(item)">
+
+    <ion-card-content>
+      <ion-card-title>
+        {{item.title}}
+        <img class="gravity_icon" *ngIf="item.gravity=='low'" src="./assets/YellowCircle.png"/>
+        <img class="gravity_icon" *ngIf="item.gravity=='mid'" src="./assets/OrangeCircle.png"/>
+        <img class="gravity_icon" *ngIf="item.gravity=='high'" src="./assets/RedCircle.png"/>
+      </ion-card-title>
+      <p>{{item.description}}</p>
+      <br>
+      <h6 class="small" (click)="openMaps(item.location)">
+        <ion-icon name="locate" color="primary"></ion-icon>
+        Distante {{item.distanceToShow}} dalla tua posizione
+      </h6>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="likeClicked(item, true)">
+          <ion-icon name="ios-thumbs-up-outline" *ngIf="item.userchoice==0 || item.userchoice==-1"></ion-icon>
+          <ion-icon name="ios-thumbs-up" *ngIf="item.userchoice==1"></ion-icon>
+          <div>{{item.likes}} Mi piace</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="likeClicked(item, false)">
+          <ion-icon name="ios-thumbs-down-outline" *ngIf="item.userchoice==0 || item.userchoice==1"></ion-icon>
+          <ion-icon name="ios-thumbs-down" *ngIf="item.userchoice==-1"></ion-icon>
+          <div>{{item.dislikes}} Non mi piace</div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>

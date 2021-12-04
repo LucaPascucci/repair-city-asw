@@ -1,0 +1,79 @@
+page-profile {
+
+  ion-header {
+    .toolbar {
+      position: absolute;
+
+      .toolbar-background {
+        opacity: 0.7;
+      }
+
+      .toolbar-title {
+        color: black;
+      }
+    }
+  }
+
+  #profile_data {
+    display: block;
+    margin: 10px auto 0px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .thumb_up_user {
+    display: grid;
+    margin-left: 35%;
+    float: left;
+    width: 40px;
+  }
+
+  .thumb_down_user {
+    display: grid;
+    margin-right: 35%;
+    float: right;
+    width: 40px;
+  }
+
+  #segment_profile {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .thumb_segnalation {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: map-get($colors, primary);
+  }
+
+  .card_title {
+    font-weight: bold;
+  }
+
+  .gravity_icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    float: right;
+  }
+
+  .profile_image {
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+    border-radius:10px;
+    border:1px solid white;
+  }
+
+  .background {
+    height: 40%;
+    padding-top: 20%;
+    background-image: url(../assets/InfoBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
